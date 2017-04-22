@@ -87,17 +87,17 @@
 
 
 
-<meta name="description" content="#Hexo和Git搭建博客">
+<meta name="description" content="Hexo和Git搭建博客">
 <meta name="keywords">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo和git搭建博客">
 <meta property="og:url" content="http://RainyXY.github.io/2017/04/22/hexo和git搭建博客/index.html">
 <meta property="og:site_name" content="Rainy's Blog">
-<meta property="og:description" content="#Hexo和Git搭建博客">
-<meta property="og:updated_time" content="2017-04-22T11:09:34.396Z">
+<meta property="og:description" content="Hexo和Git搭建博客">
+<meta property="og:updated_time" content="2017-04-22T11:36:22.760Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo和git搭建博客">
-<meta name="twitter:description" content="#Hexo和Git搭建博客">
+<meta name="twitter:description" content="Hexo和Git搭建博客">
 
 
 
@@ -423,9 +423,7 @@
       
 
       
-        <p>#Hexo和Git搭建博客</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>##Git</p>
-<pre><code>$ cd ~/. ssh #检查本机已存在的ssh密钥
+        <h1 id="Hexo和Git搭建博客"><a href="#Hexo和Git搭建博客" class="headerlink" title="Hexo和Git搭建博客"></a>Hexo和Git搭建博客</h1><h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><pre><code>$ cd ~/. ssh #检查本机已存在的ssh密钥
 </code></pre><p>如果提示：No such file or directory 说明你是第一次使用git。</p>
 <pre><code>$ ssh-keygen -t rsa -C &quot;邮件地址&quot;
 </code></pre><p>然后连续3次回车，最终会生成一个文件在用户目录下，打开用户目录，找到.ssh\id_rsa.pub文件，记事本打开并复制里面的内容，打开你的github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key：</p>
@@ -438,8 +436,7 @@
 <p>看到这个信息说明SSH已配置成功！</p>
 <pre><code>$ git config --global user.name &quot;RainyXY&quot;         // 你的github用户名，非昵称
 $ git config --global user.email  &quot;xxx@qq.com&quot;    // 填写你的github注册邮箱
-</code></pre><p>##Hexo</p>
-<blockquote>
+</code></pre><h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><blockquote>
 <p>安装</p>
 </blockquote>
 <pre><code>$ npm install -g hexo
@@ -498,23 +495,23 @@ $ git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia
 <p>上传到github<br>如果你一切都配置好了，发布上传很容易，一句hexo d就搞定，当然关键还是你要把所有东西配置好。</p>
 <p>首先，ssh key肯定要配置好。</p>
 <p>其次，配置_config.yml中有关deploy的部分</p>
-<pre><code>#博客名称
+<pre><code>博客名称
 title: 我的博客
-#副标题
+副标题
 subtitle: 
-#简介
+简介
 description: 
-#博客作者
+博客作者
 author: Rainy
-#博客语言
+博客语言
 language: zh-CN
-#时区
+时区
 timezone:
 
-#博客地址,与申请的GitHub一致
+博客地址,与申请的GitHub一致
 url: http://RainyXY.github.io
 root: /
-#博客链接格式
+博客链接格式
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -546,21 +543,21 @@ default_category: uncategorized
 category_map:
 tag_map:
 
-#日期格式
+日期格式
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 
-#分页，每页文章数量
+分页，每页文章数量
 per_page: 10
 pagination_dir: page
 
-#博客主题
+博客主题
 theme: landscape
 
-#发布设置
+发布设置
 deploy: 
   type: git
-  #RainyXY改为你的github用户名
+  RainyXY改为你的github用户名
   repo:git@github.com:RainyXYRainyXY.github.io.git
   branch: master
 </code></pre><blockquote>
@@ -787,7 +784,7 @@ $ git config --global user.email &quot;你的邮箱&quot;
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text"></span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo和Git搭建博客"><span class="nav-number">1.</span> <span class="nav-text">Hexo和Git搭建博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.1.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git"><span class="nav-number">1.2.</span> <span class="nav-text">Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo"><span class="nav-number">1.3.</span> <span class="nav-text">Hexo</span></a></li></ol></li></ol></div>
             
 
           </div>
