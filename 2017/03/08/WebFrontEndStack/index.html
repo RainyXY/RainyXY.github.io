@@ -1,0 +1,1353 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="JavaScript，HTML，CSS，Node，Vue，Web，Bootstrap，jQuery," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="爆栈系统开发技术栈、Web前端开发技术栈、数据库技术栈、.NET技术栈！http://overflowstack.github.io">
+<meta name="keywords" content="JavaScript，HTML，CSS，Node，Vue，Web，Bootstrap，jQuery">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WebFrontEndStack">
+<meta property="og:url" content="http://RainyXY.github.io/2017/03/08/WebFrontEndStack/index.html">
+<meta property="og:site_name" content="Rainy's Blog">
+<meta property="og:description" content="爆栈系统开发技术栈、Web前端开发技术栈、数据库技术栈、.NET技术栈！http://overflowstack.github.io">
+<meta property="og:image" content="http://rainyxy.github.io/2017/03/08/WebFrontEndStack/Web%20Front%20End%20Stack.zh-cn.png">
+<meta property="og:updated_time" content="2017-04-25T13:28:31.463Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="WebFrontEndStack">
+<meta name="twitter:description" content="爆栈系统开发技术栈、Web前端开发技术栈、数据库技术栈、.NET技术栈！http://overflowstack.github.io">
+<meta name="twitter:image" content="http://rainyxy.github.io/2017/03/08/WebFrontEndStack/Web%20Front%20End%20Stack.zh-cn.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"right","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://RainyXY.github.io/2017/03/08/WebFrontEndStack/"/>
+
+
+
+
+
+  <title> WebFrontEndStack | Rainy's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?0fb146923b2148c0d67487f0769e02a1";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Rainy's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-life">
+          <a href="/life" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />
+            
+            生活中的美好
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://RainyXY.github.io/2017/03/08/WebFrontEndStack/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Rainy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rainy's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                WebFrontEndStack
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-08T00:00:00+08:00">
+                2017-03-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/03/08/WebFrontEndStack/" class="leancloud_visitors" data-flag-title="WebFrontEndStack">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  1,068
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  5
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="爆栈"><a href="#爆栈" class="headerlink" title="爆栈"></a>爆栈</h1><p>系统开发技术栈、Web前端开发技术栈、数据库技术栈、.NET技术栈！<br><a href="http://overflowstack.github.io" target="_blank" rel="external">http://overflowstack.github.io</a></p>
+<a id="more"></a>
+<h1 id="本地化"><a href="#本地化" class="headerlink" title="本地化"></a>本地化</h1><p>English:<br><a href="https://github.com/unruledboy/WebFrontEndStack/" target="_blank" rel="external">https://github.com/unruledboy/WebFrontEndStack/</a></p>
+<p>中文博客:<br><a href="http://www.cnblogs.com/unruledboy/p/WebFrontEndStack.html" target="_blank" rel="external">http://www.cnblogs.com/unruledboy/p/WebFrontEndStack.html</a></p>
+<p>Español:<br><a href="https://github.com/unruledboy/WebFrontEndStack/blob/master/README.es-es.md" target="_blank" rel="external">https://github.com/unruledboy/WebFrontEndStack/blob/master/README.es-es.md</a></p>
+<h1 id="Web前端技术栈"><a href="#Web前端技术栈" class="headerlink" title="Web前端技术栈"></a>Web前端技术栈</h1><p>比较全面的浏览器、平台、类库、框架、工具等。</p>
+<p><img src="Web Front End Stack.zh-cn.png" alt="Image of Web Front End Stack"></p>
+<h1 id="自行生成预览图"><a href="#自行生成预览图" class="headerlink" title="自行生成预览图"></a>自行生成预览图</h1><h2 id="准备环境"><a href="#准备环境" class="headerlink" title="准备环境"></a>准备环境</h2><p>您应该安装Visual Studio 2010+。</p>
+<ol>
+<li><p>安装 <a href="https://nodejs.org" target="_blank" rel="external">nodejs</a>.</p>
+</li>
+<li><p>安装 <a href="http://phantomjs.org" target="_blank" rel="external">Phantomjs</a>.</p>
+</li>
+<li><p>安装 <a href="https://www.python.org/" target="_blank" rel="external">Python 2.7</a>.</p>
+</li>
+<li><p><code>npm install</code></p>
+</li>
+</ol>
+<p>如果出现错误，您可以检查 [phantomjs-node] 的依赖(<a href="https://github.com/sgentle/phantomjs-node/wiki" target="_blank" rel="external">https://github.com/sgentle/phantomjs-node/wiki</a>), <a href="https://github.com/TooTallNate/node-gyp#installation" target="_blank" rel="external">node-gyp</a>.</p>
+<h2 id="运行命令"><a href="#运行命令" class="headerlink" title="运行命令"></a>运行命令</h2><p><code>npm start</code> 运行服务并直接打开主html文件。</p>
+<p><code>npm run build</code> 生成预览图。</p>
+<h2 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">-h, --help                           Display this message.</div><div class="line">-p, --port number                    (Default: 3000) Set the port what express listening.</div><div class="line">-ues, --update_existed_stargazers    (Default: false) Update project&apos;s stargazers including existed.</div><div class="line">--phantomjs                          The task to generate the image.</div><div class="line">--readme                             The task to update readme.</div><div class="line">--updatestargazers                   The task to update the count of the stargazers.</div></pre></td></tr></table></figure>
+<h1 id="为什么？"><a href="#为什么？" class="headerlink" title="为什么？"></a>为什么？</h1><p>大家是否想过：</p>
+<ul>
+<li>Web前端开发究竟包含哪些技术呢？</li>
+<li>我所掌握的技术这个子集，在Web前端技术大系这个超集里面占的比例是多少呢？</li>
+<li>我究竟还没有掌握多少Web前端技术呢？</li>
+<li>面试的时候会考哪些技术呢？</li>
+</ul>
+<p>那么，Web前端开发是否也应该有这样的技术栈概览图呢？搜索了很久，没有找到一个符合我要求的“较为全面”地表述Web前端技术大系的图表。所以我们自行设计了这个Web前端技术栈。</p>
+<p>这个图表里的分类未必准确，相关技术也难免会有遗漏，欢迎大家指点以便不断改进。</p>
+<p>Web前端技术实在太繁多限于篇幅，，这里没有罗列一些技术。</p>
+<p>您可以点击下面链接查看交互式预览图(用鼠标移动/缩放/点击节点打开相关网站)：</p>
+<p><a href="https://rawgit.com/unruledboy/WebFrontEndStack/master/ux/WebFrontEndStack.htm?locale=zh-cn" target="_blank" rel="external">https://rawgit.com/unruledboy/WebFrontEndStack/master/ux/WebFrontEndStack.htm?locale=zh-cn</a> </p>
+<h1 id="Web前端技术栈-1"><a href="#Web前端技术栈-1" class="headerlink" title="Web前端技术栈"></a>Web前端技术栈</h1><!--BUILD_START-->
+<ul>
+<li>Web前端开发技术栈<ul>
+<li>浏览器<ul>
+<li><a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank" rel="external">Internet Explorer</a></li>
+<li><a href="http://www.google.com/chrome/" target="_blank" rel="external">Chrome</a></li>
+<li><a href="https://www.mozilla.org/" target="_blank" rel="external">Firefox</a></li>
+<li><a href="http://www.apple.com/safari/" target="_blank" rel="external">Safari</a></li>
+<li><a href="http://www.opera.com/" target="_blank" rel="external">Opera</a></li>
+<li><a href="https://www.microsoft.com/en-us/windows/microsoft-edge" target="_blank" rel="external">Edge</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Netscape" target="_blank" rel="external">Netscape ;-)</a></li>
+</ul>
+</li>
+<li>协议<ul>
+<li><a href="https://www.ietf.org/rfc/rfc2616.txt" target="_blank" rel="external">HTTP/1.1</a><ul>
+<li>链接</li>
+<li>会话</li>
+<li>授权</li>
+<li>请求</li>
+<li>响应</li>
+</ul>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/HTTP/2" target="_blank" rel="external">HTTP/2</a><ul>
+<li>压缩</li>
+<li>打包</li>
+<li>服务器端推送</li>
+</ul>
+</li>
+<li>WebSocket</li>
+</ul>
+</li>
+<li>Web三剑客<ul>
+<li>HTML (HyperText Markup Language)</li>
+<li>CSS (Cascading Style Sheets)</li>
+<li>JavaScript</li>
+</ul>
+</li>
+<li>标准<ul>
+<li>W3C<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>XHTML</li>
+<li>XML</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>核心概念<ul>
+<li>HTML<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" target="_blank" rel="external">DOM</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element" target="_blank" rel="external">Element</a></li>
+<li>Attribute</li>
+</ul>
+</li>
+<li>JavaScript<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype" target="_blank" rel="external">Prototype</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Scope" target="_blank" rel="external">Scope</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures" target="_blank" rel="external">Closure</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Glossary/JSON" target="_blank" rel="external">JSON (JavaSript Object Notation)</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/AJAX" target="_blank" rel="external">AJAX (Asynchronous JavaScript and XML)</a></li>
+</ul>
+</li>
+<li>CSS<ul>
+<li>Selector</li>
+<li>Priority</li>
+<li>Specificity</li>
+<li>Box Model</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>渲染引擎<ul>
+<li><a href="https://en.wikipedia.org/wiki/Trident_(layout_engine" target="_blank" rel="external">Trident (IE)</a>)</li>
+<li><a href="http://www.chromium.org/blink" target="_blank" rel="external">Blink / prev. WebKit (Chrome)</a></li>
+<li><a href="https://developer.mozilla.org/en-us/docs/Mozilla/Gecko" target="_blank" rel="external">Gecko (Firefox)</a></li>
+<li><a href="http://www.webkit.org/" target="_blank" rel="external">WebKit (Safari)</a></li>
+<li><a href="http://www.chromium.org/blink" target="_blank" rel="external">Blink / prev. Presto (Opera)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/EdgeHTML" target="_blank" rel="external">EdgeHTML (Edge)</a></li>
+</ul>
+</li>
+<li>脚本引擎<ul>
+<li><a href="https://en.wikipedia.org/wiki/JScript" target="_blank" rel="external">JScript (IE8- / ASP)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Chakra_(JScript_engine" target="_blank" rel="external">Chakra (IE9+ / Edge)</a>)</li>
+<li><a href="https://developers.google.com/v8/?hl=zh-CN" target="_blank" rel="external">V8 (Chrome / Opera / Nodejs / MongoDB)</a> <a href="https://github.com/v8/v8/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="https://developer.mozilla.org/en-us/docs/Mozilla/Projects/SpiderMonkey" target="_blank" rel="external">SpiderMonkey (Firefox)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/WebKit#JavaScriptCore" target="_blank" rel="external">JavaScriptCore (Safari)</a></li>
+</ul>
+</li>
+<li>运行时<ul>
+<li>Cookie</li>
+<li>Local Cache</li>
+<li>Session Storage</li>
+<li>Local Storage</li>
+<li>Components<ul>
+<li>Extensions</li>
+<li>Plugins</li>
+</ul>
+</li>
+<li>Resources<ul>
+<li>Images</li>
+<li>Icons</li>
+<li>Fonts</li>
+<li>Audios</li>
+<li>Videos</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>编辑器<ul>
+<li><a href="http://www.sublimetext.com/" target="_blank" rel="external">Sublime Text</a></li>
+<li><a href="https://www.jetbrains.com/webstorm/" target="_blank" rel="external">WebStorm</a></li>
+<li><a href="https://atom.io/" target="_blank" rel="external">Atom</a> <a href="https://github.com/atom/atom/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://www.vim.org/" target="_blank" rel="external">Vim</a></li>
+<li><a href="https://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a></li>
+<li><a href="http://brackets.io/" target="_blank" rel="external">Brackets</a> <a href="https://github.com/adobe/brackets/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://lighttable.com/" target="_blank" rel="external">Light Table</a> <a href="https://github.com/LightTable/LightTable/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="https://www.visualstudio.com/" target="_blank" rel="external">Visual Studio</a></li>
+<li><a href="https://code.visualstudio.com/" target="_blank" rel="external">Visual Studio Code (Linux &amp; Mac)</a> <a href="https://github.com/Microsoft/vscode" target="_blank" rel="external">[GitHub]</a></li>
+<li>Dreamweaver ;-)</li>
+<li>FrontPage / SharePoint Designer ;-)</li>
+</ul>
+</li>
+<li>编译任务<ul>
+<li>精简</li>
+<li>编译</li>
+<li>合并</li>
+<li>混淆</li>
+<li>图像优化</li>
+<li>单元测试</li>
+</ul>
+</li>
+<li>编译工具<ul>
+<li><a href="http://www.gruntjs.com/" target="_blank" rel="external">Grunt</a> <a href="https://github.com/cowboy/jquery-tiny-pubsub/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://gulpjs.com/" target="_blank" rel="external">Gulp</a> <a href="https://github.com/gulpjs/gulp/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://brunch.io/" target="_blank" rel="external">Brunch</a> <a href="https://github.com/brunch/brunch/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://yeoman.io/" target="_blank" rel="external">Yeoman</a></li>
+<li>Broccoli <a href="https://github.com/broccolijs/broccoli/" target="_blank" rel="external">[GitHub]</a></li>
+</ul>
+</li>
+<li>调试<ul>
+<li><a href="https://developer.chrome.com/devtools" target="_blank" rel="external">Developer Tools</a></li>
+<li><a href="http://getfirebug.com/" target="_blank" rel="external">Firebug</a> <a href="https://github.com/firebug/firebug/" target="_blank" rel="external">[GitHub]</a></li>
+</ul>
+</li>
+<li>基础工具<ul>
+<li><a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a> <a href="https://github.com/joyent/node/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://phantomjs.org/" target="_blank" rel="external">Phantom.js</a> <a href="https://github.com/ariya/phantomjs/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey" target="_blank" rel="external">SpiderMonkey</a></li>
+</ul>
+</li>
+<li>质量控制<ul>
+<li><a href="http://www.jslint.com/" target="_blank" rel="external">JSLint</a> <a href="https://github.com/douglascrockford/JSLint/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://jshint.com/" target="_blank" rel="external">JSHint</a> <a href="https://github.com/jshint/jshint/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://jscs.info/" target="_blank" rel="external">jscs</a> <a href="https://github.com/jscs-dev/node-jscs" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="https://developers.google.com/closure/utilities/" target="_blank" rel="external">Closure Linter</a></li>
+</ul>
+</li>
+<li>包管理<ul>
+<li><a href="https://www.npmjs.com/" target="_blank" rel="external">npm</a> <a href="https://github.com/npm/npm/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://bower.io/" target="_blank" rel="external">Bower</a> <a href="https://github.com/bower/bower/" target="_blank" rel="external">[GitHub]</a></li>
+</ul>
+</li>
+<li>测试<ul>
+<li>工具<ul>
+<li><a href="https://qunitjs.com/" target="_blank" rel="external">QUnit</a> <a href="https://github.com/jquery/qunit/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://jasmine.github.io/" target="_blank" rel="external">Jasmine</a> <a href="https://github.com/jasmine/jasmine/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="https://mochajs.org/" target="_blank" rel="external">Mocha</a> <a href="https://github.com/mochajs/mocha/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://www.seleniumhq.org/" target="_blank" rel="external">Selenium</a> <a href="https://github.com/SeleniumHQ/selenium/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://webdriver.io/" target="_blank" rel="external">WebDriverIO</a> <a href="https://github.com/webdriverio/webdriverio/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://www.protractortest.org/" target="_blank" rel="external">Protractor</a></li>
+<li><a href="http://chaijs.com/" target="_blank" rel="external">Chai</a> <a href="https://github.com/jfirebaugh/konacha/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://sinonjs.org/" target="_blank" rel="external">Sinon.JS</a> <a href="https://github.com/cjohansen/Sinon.JS/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://karma-runner.github.io/" target="_blank" rel="external">Karma</a> <a href="https://github.com/karma-runner/karma/" target="_blank" rel="external">[GitHub]</a></li>
+<li>nodeunit <a href="https://github.com/caolan/nodeunit/" target="_blank" rel="external">[GitHub]</a></li>
+<li>tape <a href="http://github.com/substack/tape" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://nightmarejs.org/" target="_blank" rel="external">nightmare</a> <a href="https://github.com/segmentio/nightmare" target="_blank" rel="external">[GitHub]</a></li>
+</ul>
+</li>
+<li>在线工具<ul>
+<li><a href="https://saucelabs.com/" target="_blank" rel="external">Sauce Labs</a></li>
+<li><a href="https://www.browserstack.com/" target="_blank" rel="external">Browser Stack</a></li>
+<li><a href="http://browsershots.org/" target="_blank" rel="external">Browser Shots</a></li>
+<li><a href="https://www.browserling.com/" target="_blank" rel="external">Browserling</a></li>
+<li><a href="https://spoon.net/browsers/" target="_blank" rel="external">Browser Sandbox</a></li>
+<li><a href="https://crossbrowsertesting.com/" target="_blank" rel="external">Cross Browser Testing</a></li>
+<li><a href="http://www.browsera.com/" target="_blank" rel="external">Browsera</a></li>
+<li><a href="http://www.powermapper.com/products/sortsite/checks/browser-compatibility/" target="_blank" rel="external">SortSite</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>库 / 框架<ul>
+<li>基础库<ul>
+<li><a href="https://jquery.com/" target="_blank" rel="external">jQuery</a> <a href="https://github.com/jquery/jquery/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://prototypejs.org/" target="_blank" rel="external">Prototype</a> <a href="https://github.com/sstephenson/prototype/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://zeptojs.com/" target="_blank" rel="external">Zepto</a> <a href="https://github.com/madrobby/zepto/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://mootools.net/" target="_blank" rel="external">MooTool</a> <a href="https://github.com/mootools/mootools-core/" target="_blank" rel="external">[GitHub]</a></li>
+</ul>
+</li>
+<li>模块化<ul>
+<li>ES6 Module</li>
+<li>CommonJS<ul>
+<li><a href="http://webpack.github.io/" target="_blank" rel="external">webpack</a> <a href="https://github.com/webpack/webpack/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://browserify.org/" target="_blank" rel="external">browserify</a> <a href="https://github.com/substack/node-browserify/" target="_blank" rel="external">[GitHub]</a></li>
+</ul>
+</li>
+<li>AMD<ul>
+<li><a href="http://requirejs.org/" target="_blank" rel="external">RequireJS</a> <a href="https://github.com/jrburke/requirejs/" target="_blank" rel="external">[GitHub]</a></li>
+</ul>
+</li>
+<li>UMD<ul>
+<li>umd <a href="https://github.com/umdjs/umd/" target="_blank" rel="external">[GitHub]</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>框架<ul>
+<li><a href="https://angularjs.org/" target="_blank" rel="external">AngularJS</a> <a href="https://github.com/angular/angular.js/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://backbonejs.org/" target="_blank" rel="external">Backbone</a> <a href="https://github.com/jashkenas/backbone/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://knockoutjs.com/" target="_blank" rel="external">Knockout</a> <a href="https://github.com/SteveSanderson/knockout/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://emberjs.com/" target="_blank" rel="external">Ember</a> <a href="https://github.com/emberjs/ember.js/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://facebook.github.io/react/" target="_blank" rel="external">React</a> <a href="https://github.com/facebook/react/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="https://www.polymer-project.org/" target="_blank" rel="external">polymer</a> <a href="https://github.com/polymer/polymer/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://deftjs.org/" target="_blank" rel="external">Deft.js</a> <a href="https://github.com/deftjs/DeftJS/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://vuejs.org/" target="_blank" rel="external">Vue</a> <a href="https://github.com/yyx990803/vue/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://riotjs.com/" target="_blank" rel="external">Riot</a> <a href="https://github.com/riot/riot" target="_blank" rel="external">[GitHub]</a></li>
+</ul>
+</li>
+<li>UI框架<ul>
+<li><a href="http://getbootstrap.com/" target="_blank" rel="external">Bootstrap</a> <a href="https://github.com/twbs/bootstrap/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://semantic-ui.com/" target="_blank" rel="external">Semantic UI</a> <a href="https://github.com/Semantic-Org/Semantic-UI/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://foundation.zurb.com/" target="_blank" rel="external">Foundation</a> <a href="https://github.com/zurb/foundation/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://material-ui.com/" target="_blank" rel="external">Material UI</a> <a href="https://github.com/callemall/material-ui/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="https://dev.windows.com/en-us/develop/winjs" target="_blank" rel="external">WinJS</a> <a href="https://github.com/winjs/winjs" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://purecss.io/" target="_blank" rel="external">Pure</a> <a href="https://github.com/yahoo/pure/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://amazeui.org/" target="_blank" rel="external">Amaze UI</a> <a href="https://github.com/allmobilize/amazeui" target="_blank" rel="external">[GitHub]</a></li>
+</ul>
+</li>
+<li>WebSocket<ul>
+<li><a href="http://socket.io/" target="_blank" rel="external">Socket.io</a> <a href="https://github.com/Automattic/socket.io/" target="_blank" rel="external">[GitHub]</a></li>
+<li>web-socket-js <a href="https://github.com/gimite/web-socket-js/" target="_blank" rel="external">[GitHub]</a></li>
+</ul>
+</li>
+<li>数据可视化<ul>
+<li><a href="http://d3js.org/" target="_blank" rel="external">D3</a> <a href="https://github.com/mbostock/d3/wiki/Gallery/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://echarts.baidu.com" target="_blank" rel="external">Echarts</a> <a href="https://github.com/ecomfe/esl/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://www.highcharts.com/" target="_blank" rel="external">HighCharts</a> <a href="https://github.com/highslide-software/highcharts.com/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://visjs.org/" target="_blank" rel="external">Vis.js</a> <a href="https://github.com/almende/vis/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://www.flotcharts.org/" target="_blank" rel="external">Flot</a> <a href="https://github.com/flot/flot/" target="_blank" rel="external">[GitHub]</a></li>
+</ul>
+</li>
+<li>WebGL<ul>
+<li><a href="http://threejs.org/" target="_blank" rel="external">Three.js</a> <a href="https://github.com/mrdoob/three.js/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://www.babylonjs.com/" target="_blank" rel="external">Babylon.js</a> <a href="https://github.com/BabylonJS/Babylon.js/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://www.pixijs.com/" target="_blank" rel="external">Pixi.js</a> <a href="https://github.com/GoodBoyDigital/pixi.js/" target="_blank" rel="external">[GitHub]</a></li>
+</ul>
+</li>
+<li>CSS3 动画<ul>
+<li><a href="https://daneden.github.io/animate.css/" target="_blank" rel="external">Animate.css</a> <a href="https://github.com/daneden/animate.css/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://bouncejs.com/" target="_blank" rel="external">bounce.js</a> <a href="https://github.com/tictail/bounce.js/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="https://h5bp.github.io/Effeckt.css/" target="_blank" rel="external">Effeckt.css</a> <a href="https://github.com/h5bp/Effeckt.css/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="https://visionmedia.github.io/move.js/" target="_blank" rel="external">move.js</a> <a href="https://github.com/visionmedia/move.js/" target="_blank" rel="external">[GitHub]</a></li>
+</ul>
+</li>
+<li>流程控制<ul>
+<li>ES6<ul>
+<li>Promise</li>
+<li>Generator</li>
+</ul>
+</li>
+<li>ES7<ul>
+<li>yield</li>
+<li>await</li>
+</ul>
+</li>
+<li>async <a href="https://github.com/caolan/async/" target="_blank" rel="external">[GitHub]</a></li>
+<li>co <a href="https://github.com/tj/co/" target="_blank" rel="external">[GitHub]</a></li>
+<li>Promise<ul>
+<li>Bluebird <a href="https://github.com/petkaantonov/bluebird/" target="_blank" rel="external">[GitHub]</a></li>
+<li>q <a href="https://github.com/kriskowal/q/" target="_blank" rel="external">[GitHub]</a></li>
+<li>when.js <a href="https://github.com/cujojs/when/" target="_blank" rel="external">[GitHub]</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>函数式编程<ul>
+<li><a href="http://baconjs.github.io/" target="_blank" rel="external">bacon.js</a> <a href="https://github.com/baconjs/bacon.js/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="https://facebook.github.io/immutable-js/" target="_blank" rel="external">immutable.js</a> <a href="https://github.com/facebook/immutable-js/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://ramdajs.com/" target="_blank" rel="external">ramda</a> <a href="http://github.com/ramda/ramda" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://underscorejs.org/" target="_blank" rel="external">underscore.js</a> <a href="https://github.com/jashkenas/underscore" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="https://lodash.com/" target="_blank" rel="external">lodash</a> <a href="https://github.com/lodash/lodash" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://reactivex.io/" target="_blank" rel="external">ReactiveX</a> <a href="https://github.com/Reactive-Extensions/RxJS" target="_blank" rel="external">[GitHub]</a></li>
+</ul>
+</li>
+<li>手机 UI 框架<ul>
+<li><a href="https://jquerymobile.com/" target="_blank" rel="external">jQuery Mobile</a> <a href="https://github.com/jquery/jquery-mobile/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://joapp.com/" target="_blank" rel="external">Jo</a> <a href="https://github.com/davebalmer/jo/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="https://dojotoolkit.org/reference-guide/1.10/dojox/mobile.html" target="_blank" rel="external">Dojo Mobile</a></li>
+<li><a href="http://lungo.tapquo.com/" target="_blank" rel="external">Lungo</a> <a href="https://github.com/tapquo/Lungo.js/" target="_blank" rel="external">[GitHub]</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>CSS 预处理器<ul>
+<li>LESS<ul>
+<li><a href="http://lesscss.org/" target="_blank" rel="external">LESS</a> <a href="https://github.com/less/less.js/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://lesshat.madebysource.com/" target="_blank" rel="external">Hat</a> <a href="https://github.com/csshat/lesshat/" target="_blank" rel="external">[GitHub]</a></li>
+</ul>
+</li>
+<li>Sass(SCSS)<ul>
+<li><a href="http://compass-style.org/" target="_blank" rel="external">Compass</a> <a href="https://github.com/chriseppstein/compass/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://bourbon.io/" target="_blank" rel="external">Bourbon</a> <a href="https://github.com/thoughtbot/bourbon/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://www.gumbyframework.com/" target="_blank" rel="external">Gumby</a> <a href="https://github.com/GumbyFramework/Gumby/" target="_blank" rel="external">[GitHub]</a></li>
+</ul>
+</li>
+<li>Stylus<ul>
+<li>nib <a href="https://github.com/tj/nib/" target="_blank" rel="external">[GitHub]</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>未来标准<ul>
+<li><a href="https://babeljs.io/" target="_blank" rel="external">babel</a> <a href="https://github.com/babel/babel" target="_blank" rel="external">[GitHub]</a></li>
+</ul>
+</li>
+<li>模板引擎<ul>
+<li><a href="http://handlebarsjs.com/" target="_blank" rel="external">Handlebars</a> <a href="https://github.com/wycats/handlebars.js/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://haml.info/" target="_blank" rel="external">Haml</a> <a href="https://github.com/haml/haml/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://slim-lang.com/" target="_blank" rel="external">Slim</a> <a href="https://github.com/slim-template/slim/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://jade-lang.com/" target="_blank" rel="external">Jade</a> <a href="https://github.com/jadejs/jade/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://www.embeddedjs.com/" target="_blank" rel="external">Ejs</a></li>
+<li><a href="http://meteorcapture.com/spacebars/" target="_blank" rel="external">Spacebars</a></li>
+<li><a href="http://mustache.github.io/" target="_blank" rel="external">mustache</a> <a href="https://github.com/janl/mustache.js/" target="_blank" rel="external">[GitHub]</a></li>
+</ul>
+</li>
+<li>统一化<ul>
+<li><a href="http://necolas.github.io/normalize.css/" target="_blank" rel="external">Normalize</a> <a href="https://github.com/necolas/normalize.css/" target="_blank" rel="external">[GitHub]</a></li>
+<li>Reset</li>
+</ul>
+</li>
+<li>最佳实践<ul>
+<li><a href="https://en.wikipedia.org/wiki/Search_engine_optimization" target="_blank" rel="external">SEO</a></li>
+<li>Responsiveness</li>
+<li><a href="https://en.wikipedia.org/wiki/Content_delivery_network" target="_blank" rel="external">CDN</a></li>
+</ul>
+</li>
+<li>安全<ul>
+<li>Sandbox</li>
+<li><a href="https://en.wikipedia.org/wiki/Cross-site_scripting" target="_blank" rel="external">XSS</a></li>
+<li><a href="http://www.w3.org/TR/cors/" target="_blank" rel="external">CORS</a></li>
+</ul>
+</li>
+<li>中间语言<ul>
+<li><a href="http://coffeescript.org/" target="_blank" rel="external">CoffeeScript</a> <a href="https://github.com/jashkenas/coffeescript/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://www.typescriptlang.org/" target="_blank" rel="external">TypeScript</a> <a href="https://github.com/Microsoft/TypeScript/" target="_blank" rel="external">[GitHub]</a></li>
+<li>ClojureScript <a href="https://github.com/clojure/clojurescript/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://facebook.github.io/react/docs/jsx-in-depth.html" target="_blank" rel="external">JSX (Facebook)</a></li>
+</ul>
+</li>
+<li>移动应用开发<ul>
+<li><a href="https://cordova.apache.org/" target="_blank" rel="external">PhoneGap / Cordova</a> <a href="https://github.com/apache/cordova-android/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://dev.dcloud.net.cn/mui/" target="_blank" rel="external">MUI</a> <a href="https://github.com/dcloudio/mui/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="https://facebook.github.io/react-native/" target="_blank" rel="external">React Native</a> <a href="https://github.com/facebook/react-native/" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://ionicframework.com/" target="_blank" rel="external">Ionic</a> <a href="https://github.com/driftyco/ionic/" target="_blank" rel="external">[GitHub]</a></li>
+</ul>
+</li>
+<li>桌面应用开发<ul>
+<li><a href="http://electron.atom.io/" target="_blank" rel="external">Electron</a> <a href="https://github.com/atom/electron" target="_blank" rel="external">[GitHub]</a></li>
+<li><a href="http://nwjs.io/" target="_blank" rel="external">NW.js</a> <a href="https://github.com/nwjs/nw.js" target="_blank" rel="external">[GitHub]</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!--BUILD_END-->
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript，HTML，CSS，Node，Vue，Web，Bootstrap，jQuery/" rel="tag"># JavaScript，HTML，CSS，Node，Vue，Web，Bootstrap，jQuery</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/07/换了电脑使用Hexo更新博客/" rel="prev" title="换了电脑使用Hexo更新博客">
+                换了电脑使用Hexo更新博客 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Rainy" />
+          <p class="site-author-name" itemprop="name">Rainy</p>
+           
+              <p class="site-description motion-element" itemprop="description">奔跑不单是一种能力，更是一种态度，决定你人生高度的态度。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/RainyXY" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/Rainy_X" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/Rainly_X" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#爆栈"><span class="nav-number">1.</span> <span class="nav-text">爆栈</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#本地化"><span class="nav-number">2.</span> <span class="nav-text">本地化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Web前端技术栈"><span class="nav-number">3.</span> <span class="nav-text">Web前端技术栈</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自行生成预览图"><span class="nav-number">4.</span> <span class="nav-text">自行生成预览图</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备环境"><span class="nav-number">4.1.</span> <span class="nav-text">准备环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行命令"><span class="nav-number">4.2.</span> <span class="nav-text">运行命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选项"><span class="nav-number">4.3.</span> <span class="nav-text">选项</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#为什么？"><span class="nav-number">5.</span> <span class="nav-text">为什么？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Web前端技术栈-1"><span class="nav-number">6.</span> <span class="nav-text">Web前端技术栈</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+          
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        
+<div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Rainy</span>
+</div>
+
+
+<div class="powered-by">
+<span id="busuanzi_container_site_pv">
+<span class="post-meta-item-icon">
+<i class="uesr">::before</i>
+</span>
+<span id="busuanzi_value_site_pv"></span>
+</span>
+</div>
+
+<div class="theme-info">
+<span id="busuanzi_container_site_uv">
+<span class="post-meta-item-icon">
+<i class="eye-close">::before</i>
+</span>
+<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="true"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("CnBeUkKPdrmEtMrziLQybdTq-gzGzoHsz", "1otQYdA8hE5wUuhaupgYXOgi");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+
+  <a href="https://github.com/RainyXY"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/567c3a48d796e2fc06ea80409cc9dd82bf714434/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png"></a>
+
+ <!--  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  <script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script> -->
+
+  
+</body>
+</html>
