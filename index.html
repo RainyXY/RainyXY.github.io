@@ -429,8 +429,7 @@
 
       
         
-          
-            <h1 id="Github的简单常用命令"><a href="#Github的简单常用命令" class="headerlink" title="Github的简单常用命令"></a>Github的简单常用命令</h1><hr>
+          <h1 id="Github的简单常用命令"><a href="#Github的简单常用命令" class="headerlink" title="Github的简单常用命令"></a>Github的简单常用命令</h1><hr>
 <p>###目录</p>
 <blockquote>
 <p><a href="#setting"><strong>第一章：Git环境设置</strong></a></p>
@@ -441,116 +440,13 @@
 <p><a href="#push"><strong>第六章：Git远程提交</strong></a></p>
 <p><a href="#pro"><strong>第七章：Pro Git</strong></a></p>
 </blockquote>
-<hr>
-<hr>
-<h2 id="第一章：Git环境设置"><a href="#第一章：Git环境设置" class="headerlink" title="第一章：Git环境设置"></a><a name="setting"></a>第一章：Git环境设置</h2><p>####Linux</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$sudo apt-get install git-core</div></pre></td></tr></table></figure>
-<p>####Mac</p>
-<ul>
-<li><p>使用Terminal，需要下载<a href="http://jaist.dl.sourceforge.net/project/git-osx-installer/git-2.10.1-intel-universal-mavericks.dmg" target="_blank" rel="external">Git</a>包.</p>
-</li>
-<li><p>使用<a href="https://mac-installer.github.com/mac/GitHub%20Desktop%20222.zip" target="_blank" rel="external">Github Desktop</a>.</p>
-</li>
-</ul>
-<p>####Window</p>
-<ul>
-<li>使用<a href="https://github.com/git-for-windows/git/releases/download/v2.10.1.windows.1/Git-2.10.1-32-bit.exe" target="_blank" rel="external">git bush</a></li>
-</ul>
-<hr>
-<hr>
-<h2 id="第二章：Git创建操作"><a href="#第二章：Git创建操作" class="headerlink" title="第二章：Git创建操作"></a><a name="create_SSH"></a>第二章：Git创建操作</h2><p>###Step 1:初始化信息</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$git config --global user.name &quot;your_name&quot;</div><div class="line">$git config --global user.email &quot;your_address@mail.com&quot;</div></pre></td></tr></table></figure>
-<p>###Step 2:生成密钥</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ssh-keygen -t rsa -C &quot;your_address@mail.com&quot;</div></pre></td></tr></table></figure>
-<p>###Step 3:复制密钥</p>
-<p>####Linux</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$sudo apt-get install xclip</div><div class="line">$xclip -sel clip &lt; ~/.ssh/id_rsa.pub</div></pre></td></tr></table></figure>
-<p>####Mac</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$pbcopy &lt; ~/.ssh/id_rsa.pub</div></pre></td></tr></table></figure>
-<p>####Windows</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$clip &lt; ~/.ssh/id_rsa.pub</div></pre></td></tr></table></figure>
-<ul>
-<li>如果以上方法不好用的话，情尝试以下方法,直接复制密钥</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$vi &lt; ~/.ssh/id_rsa.pub</div></pre></td></tr></table></figure>
-<p>###Step 4:关联Terminal与GitHub</p>
-<ol>
-<li>登录自己的GitHub账号进入Settings</li>
-</ol>
-<p><img src="https://github.com/Mr-Jason-Sam/UIT_Resource/blob/master/97F7FC2A-AABC-4C1B-8C09-7809A1A4C89C.png?raw=true" alt="Show"></p>
-<ol>
-<li>找到“SSH和GPG keys”并且点击“New SSH key”<br><img src="https://github.com/Mr-Jason-Sam/UIT_Resource/blob/master/00366E52-8319-4A6D-A80A-21A1182636E7.png?raw=true" alt="Show"></li>
-</ol>
-<ol>
-<li>成功创建SSH<br><img src="https://github.com/Mr-Jason-Sam/UIT_Resource/blob/master/D91F5876-6D8B-400A-A736-FCF5E02CB7E7.png?raw=true" alt="Show"></li>
-</ol>
-<p>###Step 5:在Terminal登录SSH</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ssh -T git@github.com</div></pre></td></tr></table></figure>
-<blockquote>
-<p>出现以下情景就成功登录SSH</p>
-<p><img src="https://github.com/Mr-Jason-Sam/UIT_Resource/blob/master/8ED2DE1E-8E25-45E6-BFF5-BD1B0324F405.png?raw=true" alt="Show"></p>
-<hr>
-</blockquote>
-<h2 id="第三章：Git拉取文件"><a href="#第三章：Git拉取文件" class="headerlink" title="第三章：Git拉取文件"></a><a name="create"></a>第三章：Git拉取文件</h2><p>###从远程拉取 UIT-Training/211-213-215</p>
-<p><img src="https://github.com/Mr-Jason-Sam/UIT_Resource/blob/master/FFD005F6-41A1-4ACA-8E41-196F9E029876.png?raw=true" alt="Show"></p>
-<blockquote>
-<p>以HTTPS拉取UIT-Training/211-213-215文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$git clone https://github.com/UIT-Training/211-213-215.git</div></pre></td></tr></table></figure></p>
-</blockquote>
-<hr>
-<hr>
-<h2 id="第四章：Git尝试修改"><a href="#第四章：Git尝试修改" class="headerlink" title="第四章：Git尝试修改"></a><a name="change"></a>第四章：Git尝试修改</h2><p>###打开拉取的文件(以211-213-215为例)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$cd 211-213-215/</div></pre></td></tr></table></figure>
-<p>###修改文件内容（为自己建立一个.md文件）</p>
-<p>vim下载地址：</p>
-<blockquote>
-<p><a href="http://www.vim.org/git.php" target="_blank" rel="external">Linux</a></p>
-<p><a href="https://github.com/macvim-dev/macvim/releases/download/snapshot-113/MacVim.dmg" target="_blank" rel="external">Mac</a></p>
-<p><a href="ftp://ftp.vim.org/pub/vim/pc/gvim80.exe" target="_blank" rel="external">Windows</a></p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$vim shenxiaojian.md</div></pre></td></tr></table></figure>
-<ol>
-<li><p>点击 –&gt; i</p>
-</li>
-<li><p>当输入结束之后 –&gt; Esc</p>
-</li>
-<li><p>输入 –&gt; :wq</p>
-</li>
-</ol>
-<p>###查看文件状态</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$git status</div></pre></td></tr></table></figure>
-<p><img src="https://github.com/Mr-Jason-Sam/UIT_Resource/blob/master/C0C742FE-2A1A-4279-BC77-6B5131F8B541.png?raw=true" alt="Show"><br>结果，文件未标记，需要进行git add 操作</p>
-<hr>
-<hr>
-<h2 id="第五章：Git分支操作"><a href="#第五章：Git分支操作" class="headerlink" title="第五章：Git分支操作"></a><a name="branch_1"></a>第五章：Git分支操作</h2><p>###新建分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$git branch shenxiaojian</div></pre></td></tr></table></figure>
-<p>###查看分支</p>
-<blockquote>
-<p>查看本地分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt;$git branch</div><div class="line">&gt;</div></pre></td></tr></table></figure>
-<p>查看所有分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt;$git branch -a</div><div class="line">&gt;</div></pre></td></tr></table></figure>
-</blockquote>
-<p>###切换分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$git checkout shenxiaojian</div></pre></td></tr></table></figure>
-<p> 成功切换到自己的分支</p>
-<hr>
-<hr>
-<h2 id="第六章：Git远程提交"><a href="#第六章：Git远程提交" class="headerlink" title="第六章：Git远程提交"></a><a name="push"></a>第六章：Git远程提交</h2><p>###Step 1:文件标记</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$git add shenxiaojian.md</div></pre></td></tr></table></figure>
-<p>###Step 2:提交文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$git commit -m &apos;shenxiaojian&apos;</div></pre></td></tr></table></figure>
-<p>###Step 3:远程连接</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$git remote add shenxiaojian https://github.com/UIT-Training/211-213-215.git</div></pre></td></tr></table></figure>
-<p>###Step 4:远程推进</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$git push -u origin shenxiaojian</div></pre></td></tr></table></figure>
-<hr>
-<hr>
-<h2 id="第七章：Pro-Git"><a href="#第七章：Pro-Git" class="headerlink" title="第七章：Pro Git"></a><a name="pro"></a>第七章：Pro Git</h2><p>###本周末可以学习<a href="http://git.oschina.net/progit/" target="_blank" rel="external">Pro Git</a>的基本用法～</p>
-<blockquote>
-<p>重要的知识点都在<strong>前5章</strong>,其他知识点可以选看，最好动手实践，而不是复制粘贴</p>
-</blockquote>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/11/Git基本使用/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -731,161 +627,20 @@
 
       
         
-          
-            <h1 id="常用的一些Markdown用法"><a href="#常用的一些Markdown用法" class="headerlink" title="常用的一些Markdown用法"></a>常用的一些Markdown用法</h1><p>标题：</p>
+          <h1 id="常用的一些Markdown用法"><a href="#常用的一些Markdown用法" class="headerlink" title="常用的一些Markdown用法"></a>常用的一些Markdown用法</h1><p>标题：</p>
 <p>#h1级标题</p>
 <p>##h2级标题</p>
 <p>###h3级标题</p>
 <p>####h4级标题</p>
 <p>#####h5级标题</p>
-<p>######h6级标题</p>
-<p>分割线：三个以上的短线 即可作出分割线</p>
-<hr>
-<p>超链接：<a href="网址 , 标题">连接名称</a><br><a href="http://www.izhangbo.cn," title="我是标题" target="_blank" rel="external">我是链接名</a><br><a href="/sonfilename/"><i class="icon-refresh"></i> 点我刷新</a></p>
-<p>另一种超链接写法：[链接名][链接代号]<br><a href="http://www.izhangbo.cn" title="聚牛团队" target="_blank" rel="external">here</a><br>然后在别的地方定义 3 这个详细链接信息，</p>
-<p>直接展示链接的写法：<a href="http://www.izhangbo.cn" target="_blank" rel="external">http://www.izhangbo.cn</a></p>
-<p>键盘键<br><kbd>Ctrl+[</kbd> and <kbd>Ctrl+]</kbd></p>
-<p>code格式：反引号<br>Use the <code>printf()</code> function.</p>
-<p><code>There is a literal backtick (`) here.针对在代码区段内插入反引号的情况</code> </p>
-<p>强调：<br><em>斜体强调</em><br><strong>粗体强调</strong></p>
-<p>图片<br><img src="http://www.izhangbo.cn/wp-content/themes/minty/img/logo.png" alt="Alt text" title="Optional title"></p>
-<p>使用 icon 图标文字<br><i class="icon-cog"></i></p>
-<p>段落：以一个空行开始，以一个空行结束，中间的就是一个段落。<br>表格：</p>
-<table>
-<thead>
-<tr>
-<th>Item</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Computer</td>
-<td>$1600</td>
-</tr>
-<tr>
-<td>Phone</td>
-<td>$12</td>
-</tr>
-<tr>
-<td>Pipe</td>
-<td>$1</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>Tables</th>
-<th style="text-align:center">Are</th>
-<th style="text-align:right">Cool</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>col 3 is</td>
-<td style="text-align:center">right-aligned</td>
-<td style="text-align:right">$1600</td>
-</tr>
-<tr>
-<td>col 2 is</td>
-<td style="text-align:center">centered</td>
-<td style="text-align:right">$12</td>
-</tr>
-<tr>
-<td>zebra stripes</td>
-<td style="text-align:center">are neat</td>
-<td style="text-align:right">$1</td>
-</tr>
-</tbody>
-</table>
-<p>无序列表：使用 - 加一个空格（）</p>
-<ul>
-<li>无需列表1</li>
-<li>无序列表2</li>
-<li>无序列表3</li>
-</ul>
-<p>有序列表：使用 数字 加一个英文句点</p>
-<ol>
-<li>有序列表</li>
-<li>有序列表</li>
-<li>有序列表</li>
-<li>有序列表</li>
-<li>有序列表</li>
-</ol>
-<p>换行缩进形成代码区块</p>
-<pre><code>这里先换行，然后缩进4个空格，之后的内容便可以原样显示了，适合用于显示代码内容。直到文本结束或最后一个存在缩进的行为止。    
-</code></pre><p>块引用</p>
-<blockquote>
-<p>给引用的文本开始位置都加一个 ‘&gt;’，<br>便可组成一个块引用。在块引用中，可以结合<br>其他markdown元素一块使用，比如列表。<br><strong>强调</strong><br>也可以只在第一行加大于号，其他位置不加。</p>
-<ul>
-<li>块引用里使用列表，需要和上面的内容隔开一个空行</li>
-<li>记得加空格哦。  </li>
-</ul>
-</blockquote>
-<p>粗体和斜体</p>
-<p>Markdown 的粗体和斜体也非常简单，用两个 <em> 包含一段文本就是粗体的语法，用一个 </em> 包含一段文本就是斜体的语法。例如：</p>
-<p> <em>一盏灯</em>， 一片昏黄；<strong>一简书</strong>， 一杯淡茶。 守着那一份淡定， 品读属于自己的寂寞。 保持淡定， 才能欣赏到最美丽的风景！ 保持淡定， 人生从此不再寂寞。<br>最终显示的就是下文，其中「一盏灯」是 <strong>斜体</strong>，「一简书」是<strong>粗体</strong>。</p>
-<p><strong>删除线</strong><br>这就是 <del>删除线</del></p>
-<h1 id="Pandoc"><a href="#Pandoc" class="headerlink" title="Pandoc"></a>Pandoc</h1><blockquote>
-<p>参考 Installing 安装 Pandoc。</p>
-<p>打开命令行，进入文档所在目录：</p>
-<p>cd /path/to/file/<br>执行下面的命令，将 Markdown 转换为 HTML：</p>
-<p>pandoc -o hello.html hello.md<br>默认的转换，只是将 Markdown 内容转换为 HTML 标签，所以只能看到浏览器的默认样式。<br>可以执行下面的命令，为导出的 HTML 添加自定义样式：</p>
-<p>pandoc -o hello.html -c style.css hello.md<br>style.css 仍然是以 <link> 的方式关联到 HTML 文档中的，所以在发布的时候需要将 CSS 一同发布出去。</p>
-</blockquote>
-<h1 id="MarkdownPad2-表格不显示处理"><a href="#MarkdownPad2-表格不显示处理" class="headerlink" title="MarkdownPad2 表格不显示处理"></a>MarkdownPad2 表格不显示处理</h1><p>1.添加表格的扩展</p>
-<pre><code>工具 》选项 》 Markdown 》Markdown处理器 改为 “Markdown(扩展)”即可。
-</code></pre><p>2.在设置的过程中要注册markdownpad2</p>
-<p>邮箱：</p>
-<pre><code>Soar360@live.com
-</code></pre><p>授权秘钥：</p>
-<pre><code>GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2
-M5SN6bnxn2kSE8qHqNY5QaaRxmO3YSMHxlv2EYpjdwLcPwfeTG7kUdnhKE0vVy4RidP6
-Y2wZ0q74f47fzsZo45JE2hfQBFi2O9Jldjp1mW8HUpTtLA2a5/sQytXJUQl/QKO0jUQY4pa5C
-Cx20sV1ClOTZtAGngSOJtIOFXK599sBr5aIEFyH0K7H4BoNMiiDMnxt1rD8Vb/ikJdhGMMQr
-0R4B+L3nWU97eaVPTRKfWGDE8/eAgKzpGwrQQoDh+nzX1xoVQ8NAuH+s4UcSeQ==
-</code></pre><p>表格语法</p>
-<table>
-<thead>
-<tr>
-<th>Tables</th>
-<th style="text-align:center">Are</th>
-<th style="text-align:right">Cool</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>col 3 is</td>
-<td style="text-align:center">right-aligned</td>
-<td style="text-align:right">$1600</td>
-</tr>
-<tr>
-<td>col 2 is</td>
-<td style="text-align:center">centered</td>
-<td style="text-align:right">$12</td>
-</tr>
-<tr>
-<td>zebra stripes</td>
-<td style="text-align:center">are neat</td>
-<td style="text-align:right">$1</td>
-</tr>
-</tbody>
-</table>
-<h1 id="Markdown编辑器快捷键："><a href="#Markdown编辑器快捷键：" class="headerlink" title="Markdown编辑器快捷键："></a>Markdown编辑器快捷键：</h1><p>· 加粗 Ctrl + B</p>
-<p>· 斜体 Ctrl + I</p>
-<p>· 引用 Ctrl + Q</p>
-<p>· 插入链接 Ctrl + L</p>
-<p>· 插入代码 Ctrl + K</p>
-<p>· 插入图片 Ctrl + G</p>
-<p>· 提升标题 Ctrl + H</p>
-<p>· 有序列表 Ctrl + O</p>
-<p>· 无序列表 Ctrl + U</p>
-<p>· 横线 Ctrl + R</p>
-<p>· 撤销 Ctrl + Z</p>
-<p>· 重做 Ctrl + Y</p>
-
-          
+<p>######h6级标题<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/10/Markdown使用/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
